@@ -44,16 +44,23 @@ console.log(intros('Alice', 28, 'Canada'));
 // Create a type from the object values
 type AgeUnit = (typeof AgeUnit)[keyof typeof AgeUnit];
 
+type GreetingFunction = (greeting:string) => string;
+
 type Person ={ 
     name: string;
     age: number;
     ageUnit: AgeUnit;
+    // Greet: function
+    greet: GreetingFunction;
 };
 
 const person: Person = {
     name: 'Scott',
     age: 30,
     ageUnit: AgeUnit.Years,
+    greet: (greeting)=>{
+        return `${greeting} ${person.name}`
+    }
 }
 
 function convertAgeToMonths(person: Person): Person {

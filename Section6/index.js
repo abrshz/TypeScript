@@ -35,6 +35,9 @@ const person = {
     name: 'Scott',
     age: 30,
     ageUnit: AgeUnit.Years,
+    greet: (greeting) => {
+        return `${greeting} ${person.name}`;
+    }
 };
 function convertAgeToMonths(person) {
     if (person.ageUnit === AgeUnit.Years) {
