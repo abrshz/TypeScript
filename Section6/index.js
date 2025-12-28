@@ -30,6 +30,7 @@ console.log(intros('Alice', 28, 'Canada'));
 const AgeUnit = {
     Years: 'years',
     Months: 'months',
+    Days: 'days'
 };
 const person = {
     name: 'Scott',

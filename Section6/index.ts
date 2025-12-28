@@ -39,6 +39,7 @@ console.log(intros('Alice', 28, 'Canada'));
  const AgeUnit = {
     Years: 'years',
     Months: 'months',
+    Days: 'days'
 } as const;
 
 // Create a type from the object values
