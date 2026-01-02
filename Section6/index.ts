@@ -74,4 +74,28 @@ function convertAgeToMonths(person: Person): Person {
 
 console.log(convertAgeToMonths(person));
 
+const students: string[] = ['Alice', 'Eric', 'Mark' , 'Bab'];
+
+// Map method using arrow function 
+students.map((student)=>{
+    console.log(student);
+})
+
+students.map(function (student){
+    console.log(student);
+})
+
+// Void and never Types 
+
+function writeToDatabase(value:string):void{
+    console.log('Write to a database' , value);
+}
+
+function throwError(error:string):never {
+throw new Error(error);
+};
+
+type check = never extends void ? true : false;
+type check2 = void extends never ? true : false;
+
 
