@@ -98,4 +98,22 @@ throw new Error(error);
 type check = never extends void ? true : false;
 type check2 = void extends never ? true : false;
 
+// Async function 
+
+async function fetchDatabase(id:number):Promise<any>{};
+
+const anotherAsyncFunction = async(): Promise<any> => {};
+
+async function returnString(id:number): Promise<string>{
+    return Promise.resolve("String");
+}
+
+interface User {
+  name: string;
+}
+
+async function returnUser(id: number): Promise<User> {
+  return { name: 'John' };
+}
+
 
